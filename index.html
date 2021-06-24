@@ -1,564 +1,257 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!--Title and Icon-->
+        <meta charset="utf-8">
         <title>V K Portfolio</title>
-        <link rel="icon" href="vkLogo.png" type="image/gif">
+        <link rel="icon" href="img/prof-logo.png" type="image/gif">
 
-        <!--Font Styles Importion-->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
 
-        <!--Bootstrap css and javascript files-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css"> 
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-        
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-        <style>
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
-            /*Styles for body*/
-            body{
-                top: 0;
-                left: 0;
-                width: 100%;
-                overflow-x: hidden;
-            }
-
-            /*Styles for Navigation Bar*/
-            .navbar-nav{
-                height: 80px;
-            }
-
-            .nav-item{
-                padding: 25px 15px;
-            }
-
-            .navi{
-                margin-top: 15px;
-                font-size: 20px;
-                color: #888888;
-                text-decoration: none;
-            }
-
-            .navi:hover{
-                text-decoration: none;
-                color: white;
-            }
-
-            .about-btn{
-                width: 130px;
-                height: 40px;
-                border-radius: 20px;
-                color: white;
-                font-size: 25px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                margin-right: 40px;
-                cursor: pointer;
-                font-family: 'Odibee Sans', cursive;
-                background-color: rgb(80, 166, 252);
-            }
-
-            .about-close-btn{
-                width: 130px;
-                height: 40px;
-                border-radius: 20px;
-                color: white;
-                font-size: 25px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                margin-bottom: 30px;
-                font-family: 'Odibee Sans', cursive;
-                background-color: rgb(80, 166, 252);
-            }
-
-            .about-btn:hover{
-                background-color: rgb(21, 138, 255);
-            }
-
-            .about-close-btn:hover{
-                background-color: rgb(21, 138, 255);
-            }
-
-            /*Styles for common frames*/
-            .frame{
-                height: 500px;
-                box-shadow: 0px 2px #888888;
-                width: 100%;
-            }
-
-            .icon{
-                font-size: 8em; 
-                color: white;
-            }
-
-            .name{
-                color: rgb(80, 166, 252);
-                font-family: 'Odibee Sans', cursive;
-            }
-
-            .sub-name{
-                font-size: 50px; 
-                margin: 30px; 
-                border-bottom: 1px solid rgb(102, 102, 101);
-            }
-
-            .design{
-                width: 50px; 
-                height: 10px;
-                border-radius: 25px;
-            }
-
-            /*Styles for About page*/
-            .about-page{
-                display: none; 
-                position: fixed; 
-                top: 0; 
-                left: 0; 
-                width: 100%; 
-                height: 100%; 
-                background-color: rgba(0, 0, 0, 0.486);
-            }
-
-            .about-page-container{
-                border-radius: 20px; 
-                position: relative; 
-                background-color: white; 
-                width: 75%; 
-                height: 600px; 
-                padding: 0px 50px;
-            }
-
-            /*Styles for home card*/
-            .home-content{
-                display: flex; 
-                justify-content: center; 
-                align-items: center;
-            }
-
-            .nav-home{
-                background-color: rgb(80, 166, 252);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .marquee-container{
-                width: 350px; 
-                height: 30px; 
-                border-left: 10px solid rgb(80, 166, 252); 
-                border-right: 10px solid rgb(80, 166, 252); 
-                margin-top: -30px; 
-                background-color: rgb(55, 153, 252); 
-                color: white;
-                
-            }
-
-            .marquee-content{
-                font-size: 20px; 
-                font-family: 'Roboto Condensed', sans-serif;
-            }
-
-            .profile-pic{
-                height: 400px;
-                position: absolute;
-                bottom: 0;
-                opacity: 0.8;
-            }
-
-            /*Styles for Portfolio Card*/
-            .nav-designs{
-                background-color: rgb(244, 180, 0);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            /*Styles for Portfolio Page*/
-            .portfolio-nav-btn{
-                width: fit-content;
-                padding: 20px;
-                height: 50px;
-                color: #575757;
-                font-size: 25px;
-                display: flex;
-                margin: 50px 10px;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                font-family: 'Bebas Neue', cursive;
-                border-radius: 25px;
-            }
-
-            .portfolio-nav-btn:hover{
-                color: white;
-                background-color: rgb(80, 166, 252);
-            }
-
-            .active{
-                color: white;
-                background-color: rgb(80, 166, 252);
-            }
-
-            .active:hover{
-                color: white;
-                background-color: rgb(80, 166, 252);
-            }
-
-            .portfolio-photos-bg{
-                overflow-y: scroll;
-                overflow-x: hidden;
-                background-color: rgba(212, 211, 212, 0.356);
-                height: 350px; 
-                margin-top: -30px; 
-                padding-left: 10px;
-            }
-
-            /*Styles for Contact Card*/
-            .nav-contact{
-                background-color: rgb(15, 157, 88);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .contact-logo-container{
-                width: 4em; 
-                height: 4em; 
-                background-color: rgb(15, 157, 88); 
-                border-radius: 30px; 
-                padding: 10px; 
-                display: flex; 
-                justify-content: center;
-            }
-
-            .contact-logo{
-                font-size: 2.5em;
-                color: white;
-            }
-
-            .contact-details{
-                margin: 15px;
-                width: 600px; 
-                background-color: rgba(15, 157, 88, 0.233); 
-                border-radius: 30px; 
-                font-family: 'Roboto Condensed', sans-serif;
-            }
-
-            /*Styles for About Area*/
-            .about-name{
-                font-size: 70px; 
-                color: rgb(66, 66, 66); 
-                font-family: 'Bebas Neue', cursive;
-            }
-            
-            .media{
-                font-size: 2em;
-                margin: 0px 7px;
-            }
-
-            .media:hover{
-                text-decoration: none;
-            }
-
-        </style>
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
     </head>
-    <body>
-        <div id="main" style="position: relative;">
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
-                    <img src="vkLogo.png" width="30" height="30" class="d-inline-block align-top" alt="" loading="lazy" style="margin-right: 10px;">
-                <a class="navbar-brand" href="#">V K Portfolio</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+
+    <body >
+        <!-- Nav Bar Section -->
+        <div class="navbar navbar-expand-lg bg-light navbar-light">
+            <div class="container-fluid">
+                <img src="img/prof-logo.png" width="50" height="50" class="d-inline-block align-top" alt="logo-profile" loading="lazy" style=" margin: 0px 20px;">
+                <a href="index.html" class="navbar-brand">VK</a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="navi" aria-current="page" href="#frame">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navi" href="#portfolio">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="navi" href="#contact">Contact</a>
-                    </li>
-                    </ul>
-                </div>
-                </div>
-                <div class="d-flex about-btn" onclick="document.getElementById('about-page').style.display='flex'">
-                    About
-                </div>
-            </nav>
-            <div class="row frame" id="frame">
-                <div class="col-lg-2 nav-home">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                </div>
-                <div class="col-lg-10 row">
-                    <div class="col-lg-8 col-md-4 home-content">
-                        <div>
-                            <div><p class="name" style="font-size: 80px;">Vishal Kanna S</p></div>
-                            <div class="marquee-container">
-                                <marquee class="marquee-content">Designer | Keep it Simple | Be human </marquee>
-                            </div>
-                            <div style="text-align: center;"><p style="font-size: 20px; margin-top: 10px; ">You can buy a House, but not a Home</p></div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-2" style="position: relative;">
-                        <img src="profile.png" class="profile-pic">
+
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto">
+                        <a href="#home" class="nav-item nav-link active">Home</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
-            </div>
-            <div class="row frame" id="portfolio">
-                <div class="col-lg-2 nav-designs">
-                    <span class="icon"><i class="fas fa-copy"></i></span>
-                </div>
-                <div class="col-lg-10 content">
-                    <div style="display: flex; justify-content: center;">
-                        <p class="name sub-name" style="color: rgb(102, 102, 101);">PORTFOLIO</p>
-                    </div>
-                    <div style="display: flex; justify-content: center; margin: -35px;"> 
-                        <div class="design" style="background-color: rgb(244, 180, 0);"></div>
-                    </div>
-                    <div class="row home-content" id="photos" style="height: 300px; margin-top: 35px;">
-                        <div class="row" style="display: flex; align-items: center;">
-                        </div>
-                    </div>
-                    <div style="display: flex; justify-content: center; width: 100%; margin: 10px;">
-                        <div class="d-flex about-btn" style="width: 150px; background-color: rgb(244, 180, 0);" onclick="document.getElementById('photos-page').style.display='flex'">
-                            See More
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row frame" id="contact">
-                <div class="col-lg-2 nav-contact">
-                    <span class="icon"><i class="fas fa-address-book"></i></span>
-                </div>
-                <div class="col-lg-10">
-                    <div style="display: flex; justify-content: center;">
-                        <p class="name sub-name" style="color: rgb(102, 102, 101);">CONTACT</p>
-                    </div>
-                    <div style="display: flex; justify-content: center; margin: -35px;"> 
-                        <div class="design" style="background-color: rgb(15, 157, 88); "></div>
-                    </div>
-                    <div style="display: flex; justify-content: center; margin-top: 70px;">
-                        <div style="display: flex; flex-direction: column;">
-                            <div class="row contact-details">
-                                <div class="contact-logo-container"><span class="contact-logo"><i class="fas fa-map-marker-alt"></i></span></div>
-                                <p style="margin: 20px 45px; font-weight: bold; "><b>Location: </b>33d, Henry Street, Nesamoni Nagar, Nagercoil - 629001</p>
-                            </div>
-                            <div class="row contact-details">
-                                <div class="contact-logo-container"><span class="contact-logo"><i class="far fa-envelope"></i></span></div>
-                                <p style="margin: 20px 45px; font-weight: bold;"><b>Email Id: </b>vishalkna25@gmail.com</p>
-                            </div>
-                            <div class="row contact-details">
-                                <div class="contact-logo-container"><span class="contact-logo"><i class="fas fa-phone-volume"></i></span></div>
-                                <p style="margin: 20px 45px; font-weight: bold;"><b>Phone Number: </b>+91 7094628124</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 50px;">
-                <p class="about-name">Vishal Kanna S</p>
-                <p style="margin-top: -25px;">In the end, it's not the years in your life that count</p>
-                <div style="display: flex; justify-content: center;">
-                    <div class="row">
-                        <a href="https://twitter.com/VishalKanna8" target="_blank" class="media"><i class="fab fa-twitter-square"></i></a>
-                        <a href="https://www.facebook.com/vishalkna25" target="_blank" class="media"><i class="fab fa-facebook-square"></i></a>
-                        <a href="https://www.instagram.com/itz_me_vishalkna" target="_blank" class="media"><i class="fab fa-instagram-square"></i></a>
-                        <a href="https://www.linkedin.com/in/vishal-kanna-s" target="_blank" class="media"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <p style="margin-top: 20px;">©Copyright <b>VK</b></p>
             </div>
         </div>
-        <div class="home-content about-page" style="display: none;" id="about-page">
-            <div class="row" style="padding: 20px; border-radius: 20px; background-color: white;">
-                <div>
-                    <img src="vishal.png" width="350px">
-                </div>
-                <div style="position: relative; margin: 0px 10px; width: 350px;">
-                    <div style="display: flex; justify-content: center; width: 100%;">
-                        <div style="width: fit-content;">
-                            <p class="name" style="font-size: 40px; color: rgb(102, 102, 101); border-bottom: 1px solid rgb(102, 102, 101);">ABOUT</p>
-                            <div style="display: flex; justify-content: center; margin: -20px;"> 
-                                <div class="design" style="background-color: rgb(80, 166, 252);  width: 25px; height: 8px;"></div>
+        <!-- Nav Bar Section -->
+
+
+        <!-- Hero Section -->
+        <div class="hero" id="home">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-sm-12 col-md-6">
+                        <div class="hero-content">
+                            <div class="hero-text">
+                                <h1>UI/UX Designer</h1>
+                                <h6>Hi, I'm <b>Vishal Kanna</b></h6>
+                            </div>
+                            
+                            <div class="hero-btn">
+                                <a class="btn" href="tel:+917094628124">Contact Me</a>
                             </div>
                         </div>
-                    </div> 
-                    <div style="margin: 30px; width: fit-content;"><p>I Vishal Kanna S, currently pursing my bachelor degree in Computer Science Engineering. And currently being an active member of Google Developer Students club as Creatives and Designs Lead. Being a design enthusiast, love to work in UI/UX Designing and Poster creation. 
-                        Pursive what you like, makes you feel better.</p></div>   
-                    <div style="width: 100%; bottom: 0; position: absolute; display: flex; justify-content: center;">
-                        <div class="about-close-btn" onclick="document.getElementById('about-page').style.display='none'">
-                            Close
+                    </div>
+                    <div class="col-sm-12 col-md-6 d-none d-md-block">
+                        <div class="hero-image">
+                            <img src="img/profile.png" alt="Hero Image">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- Hero Section -->
 
-        <div class="home-content about-page" style="display: none;" id="photos-page">
-            <div class="about-page-container">
-                <div style="display: flex; justify-content: center;">
-                    <p class="name sub-name" style="color: rgb(102, 102, 101);">PORTFOLIO</p>
+        <!--Professional Section-->
+        <div id="ui" class="ui-section">
+            <div class="expertise">
+                <div class="expertise-wrapper">
+                    <div class="subheading-large _16-bottom-margin">MY OPINION</div>
+                    <h2>UI/UX Designing</h2>
+                    <p class="expertise-subheading">Each of us has a different perception of designing. </p>
                 </div>
-                <!--
-                <div class="home-content" style="position: absolute; top: 30px; right:30px; width: 40px; height: 40px; color: rgb(252, 86, 80); background-color: white; border-radius: 30px; cursor: pointer;" onclick="document.getElementById('photos-page').style.display='none'">
-                    <span style="font-size: 40px;"><i class="fas fa-times-circle"></i></span>
-                </div>
-                -->
-                <div class="about-close-btn" style="position: absolute; top: 40px; right: 40px;" onclick="document.getElementById('photos-page').style.display='none'">
-                    Close
-                </div>
-                <div style="display: flex; justify-content: center; margin: -35px;"> 
-                    <div class="design" style="background-color: rgb(80, 166, 252);"></div>
-                </div>
-                <div class="row" style="display: flex; justify-content: center;">
-                    <div id="posterDesigns" class="portfolio-nav-btn active" onclick="changePhotos('posterDesigns')">Poster Designs</div>
-                    <div id="uiDesigns" class="portfolio-nav-btn" onclick="changePhotos('uiDesigns')">UI Designs</div>
-                    <div id="illustrations" class="portfolio-nav-btn" onclick="changePhotos('illustrations')">Illustration</div>
-                    <div id="web" class="portfolio-nav-btn" onclick="changePhotos('web')">Web</div>
-                </div>
-                <div id="posterDesigns-page" class="portfolio-photos-bg">
-                    <div class="row" style="display: flex; justify-content: center;">
+                <div class="w-layout-grid expertise-grid">
+                    <div id="w-node-div-block-5-52788670" class="expertise-card">
+                        <h5 class="h2-title">Flexibility &amp; <br/>Efficiency of use</h5>
+                        <p class="paragraph-grey-500">To customize the desired results for the user & help them make decisions faster.</p>
                     </div>
-                </div>
-                <div id="uiDesigns-page" class="portfolio-photos-bg" style="display: none;">
-                    <div class="row" style="display: flex; justify-content: center;">
+                    <div class="expertise-card">
+                        <h5 class="h2-title">Consistency<br/>&amp; Standards</h5>
+                        <p class="paragraph-grey-500">Simple & popular icons are used across the app & help us easily understand the function without having to read the text every time.</p>
                     </div>
-                </div>
-                <div id="illustrations-page" class="portfolio-photos-bg" style="display: none;">
-                    <div class="row" style="display: flex; justify-content: center;">
-                    </div>
-                </div>
-                <div id="web-page" class="portfolio-photos-bg" style="display: none;">
-                    <div class="row" style="display: flex; justify-content: center;">
+                    <div class="expertise-card">
+                        <h5 class="h2-title">Recognizing <br/>better the Recall</h5>
+                        <p class="paragraph-grey-500">The recent searches help us quickly see what we recently looked for instead having to remember what it was.</p>
                     </div>
                 </div>
             </div>
         </div>
+        <!--Professional Section-->
+
+        <!-- About Section -->
+        <div class="about" id="about">
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="about-img">
+                            <img src="img/vishal.png" alt="Image">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="about-content">
+                            <div class="section-header">
+                                <p>About Me</p>
+                                <h2>Keep it Simple</h2>
+                            </div>
+                            <div class="about-text">
+                                <p>
+                                    I Vishal Kanna S, currently pursing my bachelor degree in Computer Science Engineering. And currently being an active member of Google Developer Students club as Creatives and Designs Lead. Being a design enthusiast, love to work in UI/UX Designing and Poster creation. 
+                        Pursive what you like, makes you feel better.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About Section -->
 
 
+        <!-- Portfolio Section -->
+        <div class="portfolio" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center wow zoomIn" data-wow-delay="0.1s">
+                    <p>My Portfolio</p>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <ul id="portfolio-filter">
+                            <li id="posterDesigns" class="filter-active" onclick="changePhotos('posterDesigns')">Poster Designs</li>
+                            <li id="uiDesigns" onclick="changePhotos('uiDesigns')">UI Designs</li>
+                            <li id="illustrations" onclick="changePhotos('illustrations')">Illustration</li>
+                            <li id="web" onclick="changePhotos('web')">Web</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div id="Designs-page" class="carousel-inner" >
+                        <div class="carousel-item active">
+                            <img src="img/portfolio.png" class="d-block w-100" alt="">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+            </div>
+        </div>
+        <!-- Portfolio Section -->
+
+        
+        <!-- Contact Section -->
+        <div class="contact" id="contact">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-8">
+                            <div class="contact-form">
+                                <div id="success"></div>
+                                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div class="control-group">
+                                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                                        <p class="help-block"></p>
+                                    </div>
+                                    <div>
+                                        <button class="btn" type="submit" id="sendMessageButton">Send Message</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact Section -->
+
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="footer-info">
+                        <h2>Vishal Kanna S</h2>
+                        <div class="footer-menu">
+                            <p>+917094628124</p>
+                            <p>vishalkna25@gmail.com</p>
+                        </div>
+                        <div class="footer-social">
+                            <a href="https://twitter.com/VishalKanna8"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.facebook.com/vishalkna25"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/itz_me_vishalkna"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/vishal-kanna-s"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container copyright">
+                    <p>&copy; <a href="#">V K</a> All Right Reserved 
+                </div>
+            </div>
+        </div>
+        <!-- Footer Section -->
+        
+        
+        <!-- Back to top button -->
+        <a href="#" class="btn back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
         <!--------------------------FIRBASE LIBRARIES-------------------------------------------------->
         <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-app.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-database.js"></script> 
         <script src="https://www.gstatic.com/firebasejs/8.6.3/firebase-storage.js"></script> 
 
-        <!--Java Script-->
-        <script id="main-script">
-            var imgName, imgUrl;
-            var file = [];
-            var reader = new FileReader();
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
 
-            // Web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyCxQTu4WIVJOEssD0XbHwx4BJaaou2aOmw",
-                authDomain: "portfolio-94b60.firebaseapp.com",
-                projectId: "portfolio-94b60",
-                storageBucket: "portfolio-94b60.appspot.com",
-                messagingSenderId: "981772731839",
-                appId: "1:981772731839:web:13542ebc5e1cc681d48d0a",
-                measurementId: "G-KLLJWTGH19"
-            };
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
 
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-
-            var storage = firebase.storage();
-            var storageRef = storage.ref();
-
-            $('imgList').find('tbody').html('');
-
-            var i=0;
-            storageRef.child('Poster Designs/').list({maxResults: 3}).then((result) => {
-                result.items.forEach((imageRef) => {
-                    imageRef.getDownloadURL().then((url) => {
-                    console.log(url);
-                    let new_html = '';
-                    new_html += '<img src="'+url+'" style="margin: 5px 25px; box-shadow: 2px 2px #888888" height="230px" >';
-                    $('#photos').find('div').append(new_html);
-                })
-                });
-            });
-
-            storageRef.child('Poster Designs/').listAll().then((result) => {
-                result.items.forEach((imageRef) => {
-                    imageRef.getDownloadURL().then((url) => {
-                    let new_html = '';
-                    new_html += '<img src="'+url+'" style="margin: 15px; box-shadow: 2px 2px #888888" height="230px" >';
-                    $('#posterDesigns-page').find('div').append(new_html);
-                })
-                });
-            });
-
-            storageRef.child('UI-Designs/').listAll().then((result) => {
-                result.items.forEach((imageRef) => {
-                    imageRef.getDownloadURL().then((url) => {
-                    let new_html = '';
-                    new_html += '<img src="'+url+'" style="margin: 15px; box-shadow: 2px 2px #888888" height="230px" >';
-                    $('#uiDesigns-page').find('div').append(new_html);
-                })
-                });
-            });
-
-            storageRef.child('Illustrations/').listAll().then((result) => {
-                result.items.forEach((imageRef) => {
-                    imageRef.getDownloadURL().then((url) => {
-                    let new_html = '';
-                    new_html += '<img src="'+url+'" style="margin: 15px; box-shadow: 2px 2px #888888" height="230px" >';
-                    $('#illustrations-page').find('div').append(new_html);
-                })
-                });
-            });
-
-            storageRef.child('Web/').listAll().then((result) => {
-                result.items.forEach((imageRef) => {
-                    imageRef.getDownloadURL().then((url) => {
-                    let new_html = '';
-                    new_html += '<img src="'+url+'" style="margin: 15px; box-shadow: 2px 2px #888888" height="230px" >';
-                    $('#web-page').find('div').append(new_html);
-                })
-                });
-            });
-
-            function changePhotos(value){
-                var posterDesign = document.getElementById('posterDesigns');
-                var uiDesign = document.getElementById('uiDesigns');
-                var illustration = document.getElementById('illustrations');
-                var web = document.getElementById('web');
-                var val = "";
-
-                if(posterDesign.classList.contains('active')){
-                    posterDesign.classList.remove('active');
-                    document.getElementById('posterDesigns-page').style.display = 'none';
-                }else if(uiDesign.classList.contains('active')){
-                    uiDesign.classList.remove('active');
-                    document.getElementById('uiDesigns-page').style.display = 'none';
-                }else if(illustration.classList.contains('active')){
-                    illustration.classList.remove('active');
-                    document.getElementById('illustrations-page').style.display = 'none';
-                }else if(web.classList.contains('active')){
-                    web.classList.remove('active');
-                    document.getElementById('web-page').style.display = 'none';
-                }
-
-                document.getElementById(value).classList.add('active');
-                val = value + "-page";
-                document.getElementById(val).style.display = 'flex';
-            }
-        </script>
     </body>
 </html>
