@@ -724,6 +724,54 @@ a:focus {
     border-color: rgb(80, 166, 252);
 }
 
+.carousel{
+    width: fit-content;
+    margin: auto;
+}
+
+.carousel-item{
+    width: fit-content;
+}
+
+.carousel-item img{
+    height: 400px;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    left: 0;
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    left: auto;
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+
+.carousel-control-prev, .carousel-control-next{
+    opacity: 1;
+    width: fit-content;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #000000be;
+}
+
 
 /* Contact CSS */
 .contact {
